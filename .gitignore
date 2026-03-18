@@ -28,3 +28,5 @@ yarn-error.log*
 /public/xdelta3.wasm
 /native/out/*.o
 /native/xz
+/test/xdelta3-node.js
+/test/xdelta3-node.wasm

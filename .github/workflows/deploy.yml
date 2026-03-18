@@ -47,6 +47,15 @@ jobs:
       - name: Build xdelta3 WASM module
         run: ./native/build.sh
 
+      - name: Build xdelta3 Node.js test module
+        run: ./native/build-test.sh
+
+      - name: Install xdelta3 CLI (for generating test fixtures)
+        run: sudo apt-get install -y xdelta3
+
+      - name: Test xdelta3 WASM patch functionality
+        run: npm run test:wasm
+
       - name: Build React frontend
         run: npm run build
 
